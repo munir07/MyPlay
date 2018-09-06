@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+        <div fxLayoutAlign="start center" fxLayoutGap="25px">
+            <img src="assets/logo.png" class="logo" alt="">
+            <span>My Star Wars App</span>
+        </div>
+      </mat-toolbar>
+{{ this.results | json}}
+
+<button mat-raised-button color="warn" (click)="goBack()">
+        <!-- <mat-icon></mat-icon> -->
+        <span>Back</span>
+</button>

@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <div fxLayoutAlign="start center" fxLayoutGap="25px">
+        <img src="assets/logo.png" class="logo" alt="">
+        <span>My Star Wars App</span>
+    </div>
+</mat-toolbar>
+
+<div fxLayout="column" fxLayoutAlign=" none">
+  <button mat-raised-button color="accent" (click)="getCharacters()">
+    <!-- <mat-icon></mat-icon> -->
+    <span>Character</span>
+  </button>
+</div>
+
+<div fxLayout="column" fxLayoutAlign=" none">
+  <button mat-raised-button color="accent" (click)="getFilms()">
+    <!-- <mat-icon></mat-icon> -->
+    <span>Films</span>
+  </button>
+</div>

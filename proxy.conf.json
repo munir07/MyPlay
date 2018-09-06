@@ -1,0 +1,10 @@
+{
+    "/people": {
+      "target": "https://swapi.co/api",
+      "secure": true,
+      "pathRewrite": {
+      "^/people": ""
+    },
+      "changeOrigin": true
+    }
+  }

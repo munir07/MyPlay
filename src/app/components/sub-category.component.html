@@ -1,0 +1,24 @@
+<!-- {{ this.results | json}} -->
+<mat-toolbar color="primary">
+    <div fxLayoutAlign="start center" fxLayoutGap="25px">
+        <img src="assets/logo.png" class="logo" alt="">
+        <span>My Star Wars App</span>
+    </div>
+  </mat-toolbar>
+<div *ngIf="subCategoryName === 'people'" fxLayout="column" fxLayoutAlign="none">
+    <button mat-raised-button color="accent" *ngFor="let character of results; let i = index" (click)="getDetails(i+1)">
+      <!-- <mat-icon></mat-icon> -->
+      <span>{{character.name}}</span>
+    </button>
+  </div>
+<div *ngIf="subCategoryName === 'films'"fxLayout="column" fxLayoutAlign="none">
+  <button mat-raised-button color="accent" *ngFor="let film of results" (click)="getDetails(film.episode_id)">
+    <!-- <mat-icon></mat-icon> -->
+    <span>Ep {{film.episode_id}} : {{film.title}}</span>
+  </button>
+</div>
+
+<button mat-raised-button color="warn" (click)="goBack()">
+    <!-- <mat-icon></mat-icon> -->
+    <span>Back</span>
+</button>
